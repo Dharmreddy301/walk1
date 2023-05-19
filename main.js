@@ -182,7 +182,7 @@ RAPIER.init().then(() => {
   
 
  //ground
-const texture = new THREE.TextureLoader().load( "assets/plane.png" );
+const texture = new THREE.TextureLoader().load( "plane.png" );
 
   let geometry =  new THREE.BoxGeometry(50, 0, 50);
   let material = new THREE.MeshBasicMaterial({map: texture});
@@ -290,7 +290,7 @@ const texture = new THREE.TextureLoader().load( "assets/plane.png" );
 
   const loader = new GLTFLoader();
 
-  loader.load( './assets/mountain.glb', (gltf) => {
+  loader.load( 'mountain.glb', (gltf) => {
     const mountainLoaded = gltf.scene;
     mountainLoaded.traverse((child) => {
       if (child.isMesh) {
@@ -304,7 +304,7 @@ const texture = new THREE.TextureLoader().load( "assets/plane.png" );
     scene.add(mountainLoaded);
   });
 
-  loader.load( './assets/skydome.glb', (gltf) => {
+  loader.load( 'skydome.glb', (gltf) => {
     const domeLoaded = gltf.scene;
     domeLoaded.traverse((child) => {
       if (child.isMesh) {
